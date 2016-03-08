@@ -13,7 +13,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-    baseName = 'boot-portfolio'
+    baseName = 'portfolio'
     version =  '0.1.0'
 }
 
