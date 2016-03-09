@@ -1,5 +1,7 @@
 package portfolio.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
@@ -15,6 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class HomepageController implements ErrorController {
 
+    private static final Logger logger = LoggerFactory.getLogger(HomepageController.class);
+
+
     private static final String INDEX_PAGE = "index";
     private static final String ERROR_PAGE = "error_page";
 
@@ -26,7 +31,7 @@ public class HomepageController implements ErrorController {
     @RequestMapping("/")
     public String getHomepage(HttpServletRequest request, Model model) {
         final String serverName = request.getServerName().split("\\.")[0];
-
+        logger.info(serverName);
         if(StringUtils.equals(PLEX_SERVERNAME, serverName)) {
             return PLEX_REDIRECT;
         }
