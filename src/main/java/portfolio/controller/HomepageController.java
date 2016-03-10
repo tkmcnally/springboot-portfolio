@@ -31,7 +31,7 @@ public class HomepageController implements ErrorController {
     @RequestMapping("/")
     public String getHomepage(HttpServletRequest request, Model model) {
         final String serverName = request.getServerName().split("\\.")[0];
-        logger.info(serverName);
+        logger.error(serverName);
         if(StringUtils.equals(PLEX_SERVERNAME, serverName)) {
             return PLEX_REDIRECT;
         }
