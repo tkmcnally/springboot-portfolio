@@ -21,7 +21,7 @@ public class HomepageController implements ErrorController {
 
 
     private static final String INDEX_PAGE = "index";
-    private static final String ERROR_PAGE = "error_page";
+    private static final String ERROR_PAGE = "errorpage";
 
     private static final String ERROR_PATH = "/error";
 
