@@ -41,6 +41,7 @@ public class HomepageController implements ErrorController {
         final String serverName = request.getServerName().split("\\.")[0];
         if(StringUtils.equals(PLEX_SERVERNAME, serverName)) {
             WoL.sendPacket(PLEX_SERVER_IP, PLEX_SERVER_MAC);
+            logger.info("ServerNAME: " + serverName);
             return PLEX_REDIRECT;
         }
         return INDEX_PAGE;
