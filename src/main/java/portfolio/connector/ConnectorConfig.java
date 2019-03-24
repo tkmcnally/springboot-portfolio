@@ -12,6 +12,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConnectorConfig {
 
+    @Value("${server.port}")
+    private Integer httpsPort;
+
+    @Value("${server.http.port}")
+    private Integer httpPort;
+
     @Bean
     public EmbeddedServletContainerFactory servletContainer() {
         TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
@@ -32,9 +38,9 @@ public class ConnectorConfig {
     private Connector getHttpConnector() {
         Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
         connector.setScheme("http");
-        connector.setPort(80);
+        connector.setPort(httpPort);
         connector.setSecure(false);
-        connector.setRedirectPort(443);
+        connector.setRedirectPort(httpsPort);
         return connector;
     }
 }
