@@ -23,6 +23,7 @@ public class ConnectorConfig {
     public EmbeddedServletContainerFactory servletContainer() {
         TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory();
         tomcat.addAdditionalTomcatConnectors(getHttpConnector());
+        return tomcat;
     }
 
     private Connector getHttpConnector() {
