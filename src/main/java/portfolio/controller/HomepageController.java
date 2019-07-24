@@ -35,9 +35,6 @@ public class HomepageController implements ErrorController {
     @Value("${plex.server.ip}")
     private String PLEX_SERVER_IP;
 
-    @Value("${plex.server.mac}")
-    private String PLEX_SERVER_MAC;
-
     @RequestMapping("/")
     public String getHomepage(HttpServletRequest request, Model model) {
         final String serverName = request.getServerName().split("\\.")[0];
