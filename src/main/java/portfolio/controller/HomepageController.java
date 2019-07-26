@@ -40,7 +40,7 @@ public class HomepageController implements ErrorController {
         final String serverName = request.getServerName().split("\\.")[0];
         if(StringUtils.equals(PLEX_SERVERNAME, serverName)) {
             try {
-                URL url = new URL(PLEX_SERVER_IP + PLEX_WAKEUP_PORT + PLEX_WAKEUP_PATH);
+                URL url = new URL("http://" + PLEX_SERVER_IP + PLEX_WAKEUP_PORT + PLEX_WAKEUP_PATH);
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("GET");
                 con.getResponseCode();
