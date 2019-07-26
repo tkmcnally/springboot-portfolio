@@ -44,7 +44,7 @@ public class HomepageController implements ErrorController {
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("GET");
                 con.getResponseCode();
-                logger.info("Sending GET request to: " + url.getPath() + url.getPort());
+                logger.info("Sending GET request to: " + url.toURI());
             } catch (Exception e) {
                 logger.error("Error sending GET request to " + PLEX_SERVER_IP, e);
             }
