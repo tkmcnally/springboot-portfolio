@@ -44,11 +44,12 @@ public class HomepageController implements ErrorController {
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("GET");
                 con.getResponseCode();
+                logger.info("Sending GET request to: " + url.getPath() + url.getPort());
             } catch (Exception e) {
                 logger.error("Error sending GET request to " + PLEX_SERVER_IP, e);
             }
 
-            logger.info("Sending GET request to: " + PLEX_SERVER_IP + PLEX_WAKEUP_PATH);
+
             return PLEX_REDIRECT;
         }
         return INDEX_PAGE;
