@@ -1,0 +1,7 @@
+
+Xsquid:S3457,"AFormat specifiers should be used instead of string concatenation.(¦”š€
+vsquid:S00116""YRename this field "PLEX_SERVER_IP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ß©ÿÿÿÿÿ
+Nsquid:S2629,"7Use the built-in formatting to construct this argument.(¦”š€
+wsquid:S00116%"ZRename this field "PLEX_SERVER_MAC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ØïÎûÿÿÿÿ
+]squid:S1075"ARefactor your code to get this URI from a customizable parameter.(™úÛ¹úÿÿÿÿ
+lsquid:UselessImportCheck"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş

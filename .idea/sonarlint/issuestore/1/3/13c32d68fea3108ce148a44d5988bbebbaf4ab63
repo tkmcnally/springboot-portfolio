@@ -1,0 +1,6 @@
+
+rsquid:UselessImportCheck"IRemove this unused import 'org.springframework.web.servlet.ViewResolver'.(¸Òóˆüÿÿÿÿ
+€squid:UselessImportCheck	"WRemove this unused import 'org.thymeleaf.templateresolver.ClassLoaderTemplateResolver'.(ÁÔşûÿÿÿÿ
+ksquid:UselessImportCheck"GRemove this unused import 'org.thymeleaf.spring4.SpringTemplateEngine'.(»Ù¹•
+vsquid:UselessImportCheck"MRemove this unused import 'org.thymeleaf.spring4.view.ThymeleafViewResolver'.(ÒáÙ—ÿÿÿÿÿ
+lsquid:UselessImportCheck"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş
