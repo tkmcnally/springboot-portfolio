@@ -1,6 +1,7 @@
 package portfolio.connector;
 
 import org.apache.catalina.connector.Connector;
+import org.apache.coyote.http2.Http2Protocol;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +17,7 @@ public class ConnectorConfig {
     public TomcatServletWebServerFactory servletContainer() {
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
         tomcat.addAdditionalTomcatConnectors(getHttpConnector());
+        tomcat.addConnectorCustomizers(connector -> connector.addUpgradeProtocol(new Http2Protocol()));
         return tomcat;
     }
 
