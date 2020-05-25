@@ -3,7 +3,7 @@ package portfolio.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.web.ErrorController;
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +38,7 @@ public class HomepageController implements ErrorController {
     @RequestMapping("/")
     public String getHomepage(HttpServletRequest request, Model model) {
         final String serverName = request.getServerName().split("\\.")[0];
-        if(StringUtils.equals(PLEX_SERVERNAME, serverName)) {
+        if (StringUtils.equals(PLEX_SERVERNAME, serverName)) {
             try {
                 URL url = new URL("http://" + PLEX_SERVER_IP + PLEX_WAKEUP_PORT + PLEX_WAKEUP_PATH);
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();

@@ -3,16 +3,17 @@ package portfolio.util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.net.*;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 
 /**
  * Created by missionary on 2016-03-09.
  */
 public class WoL {
 
-    private static final Logger logger = LoggerFactory.getLogger(WoL.class);
-
     public static final int PORT = 9;
+    private static final Logger logger = LoggerFactory.getLogger(WoL.class);
 
     public static void sendPacket(String ipStr, String macStr) {
 
@@ -33,8 +34,7 @@ public class WoL {
             socket.close();
 
             logger.debug("Sent WoL packet.");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
 
             logger.error("Failed to send WoL packet.");
         }
@@ -51,8 +51,7 @@ public class WoL {
             for (int i = 0; i < 6; i++) {
                 bytes[i] = (byte) Integer.parseInt(hex[i], 16);
             }
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             throw new IllegalArgumentException("Invalid hex digit in MAC address.");
         }
         return bytes;

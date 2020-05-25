@@ -1,0 +1,24 @@
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}.fa-3x {
+    font-size: 3em;
+}.fa-fw {
+    width: 1.2857142857142858em;
+    text-align: center;
+}.fa-search-plus:before {
+    content: "\f00e";
+}.fa-twitter:before {
+    content: "\f099";
+}.fa-facebook:before {
+    content: "\f09a";
+}.fa-google-plus:before {
+    content: "\f0d5";
+}.fa-linkedin:before {
+    content: "\f0e1";
+}
